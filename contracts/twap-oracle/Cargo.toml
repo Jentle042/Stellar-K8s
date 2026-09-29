@@ -1,0 +1,21 @@
+[package]
+name = "stellar-twap-oracle"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "Time-Weighted Average Price (TWAP) oracle contract for Soroban"
+license = "Apache-2.0"
+
+title = "Stellar TWAP Oracle"
+
+[dependencies]
+soroban-sdk = { version = "21.0.0", features = ["alloc"] }
+soroban-env = { version = "21.0.0", features = ["testutils"] }
+
+[dev-dependencies]
+sorban-sdk = { version = "21.0.0", features = ["testutils"] }
+
+[profile.release]
+opt-level = "z"
+debug = 0
+overflow-checks = true
